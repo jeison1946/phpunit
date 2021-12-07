@@ -1,0 +1,3 @@
+services:
+  phpunit_test_seed.service:
+    class: \Drupal\phpunit_test_seed\Services\ConsultDate
