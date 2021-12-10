@@ -1,12 +1,21 @@
 <?php
 namespace Drupal\phpunit_test_seed\Services;
 
+use Drupal\Core\Datetime\DateFormatter;
+
 class ConsultDate {
+
+  public $datformatter;
+
+  public function __construct(DateFormatter $dateFormatter)
+  {
+    $this->datformatter = $dateFormatter;
+  }
 
   public function getCurrentDate($type, $format = '') {
     $date = FALSE;
     if ($type) {
-      $date = \Drupal::service('date.formatter')->format(time(), $type, $format);
+      $date = $this->datformatter->format(time(), $type, $format);
     }
     return $date;
   }
