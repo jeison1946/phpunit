@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\phpunit_test_seed\Services;
+namespace Drupal\phpunit_test\Services;
 
 use Drupal\Core\Datetime\DateFormatter;
 

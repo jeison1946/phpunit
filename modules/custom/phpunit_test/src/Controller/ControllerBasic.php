@@ -1,12 +1,12 @@
 <?php
-namespace Drupal\phpunit_test_seed\Controller;
+namespace Drupal\phpunit_test\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
 class ControllerBasic extends ControllerBase{
 
   public function view() {
-    $service = \Drupal::service('phpunit_test_seed.service');
+    $service = \Drupal::service('phpunit_test.service');
     $currentDate = $service->getCurrentDate('custom', 'Y-m-d H:i:s');
     $custom = $service->getCurrentDate(strtotime('2021-05-03 16:20:22'), 'custom', 'Y-m-d H:i:s');
 
